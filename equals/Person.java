@@ -1,4 +1,4 @@
-package equals.personEqualsV1;
+package equals;
 
 public class Person {
 	private String name;

@@ -19,16 +19,15 @@ public class FileName {
 		return path.substring(sep + 1, pto);
 	}
 	public String directory() { 
-		String dir = null;
 		// implement this method (exercise)
-		dir = path.substring(0, path.lastIndexOf(pathSeparator) + 1);
-		return dir;
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		FileName fn =
 	new FileName("/users/jmalvarez/Documents/exam.pdf",
 			     '/', '.');
+		System.out.println(fn.name());
+		System.out.println(fn.extension());
 		System.out.println(fn.directory());
 		// expected output: /user/jmalvarez/Documents/"
 	}

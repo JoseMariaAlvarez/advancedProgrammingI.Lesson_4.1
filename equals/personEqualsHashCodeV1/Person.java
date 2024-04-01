@@ -7,14 +7,13 @@ class Person {
 	}
 
 	public boolean equals(Object o) {
-		return (o instanceof Person)) &&
-			    (age == ((Person) o).age) &&
-				    (((Person) o).name.equals(name));
-  	}
+		return (o instanceof Person) &&
+				(age == ((Person) o).age) &&
+				(((Person) o).name.equals(name));
+	}
 
 	public int hashCode() {
-		return name.hashCode() +
-           Integer.hashCode(age);
+		return name.hashCode() + Integer.hashCode(age);
 	}
 }
 

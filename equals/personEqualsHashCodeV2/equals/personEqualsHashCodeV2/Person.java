@@ -1,4 +1,6 @@
-class Person {
+package equals.personEqualsHashCodeV2;
+
+public class Person {
 	private String name;
 	private int age;
 	public Person(String n, int a) {
@@ -7,13 +9,13 @@ class Person {
 	}
 
 	public boolean equals(Object o) {
-		return (o instanceof Person)) &&
-			    (age == ((Person) o).age) &&
-    					(((Person) o).name.equalsIgnoreCase(name));
-  	}
+		return (o instanceof Person) &&
+				(age == ((Person) o).age) &&
+				(((Person) o).name.equalsIgnoreCase(name));
+	}
 
 	public int hashCode() {
 		return name.toLowerCase().hashCode() + 
-					Integer.hashCode(age);
+				Integer.hashCode(age);
 	}
 }
